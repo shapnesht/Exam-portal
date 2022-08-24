@@ -1,0 +1,48 @@
+<mat-card>
+    <!-- {{user|json}} -->
+    <h1>Your Profile Details</h1>
+    <div class="bootstrap-wrapper">
+        <div class="container">
+            <div class="container text-center">
+                <img class="profile-image"
+                    src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
+                    alt="Profile Image">
+                    <h1 class="mt20">{{user.firstName}} {{user.lastName}}</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <table class="table text-center">
+                        <tr *ngIf="user.username">
+                            <td>Username</td>
+                            <td>{{user.username}}</td>
+                        </tr>
+                        <tr *ngIf="user.id">
+                            <td>Userid</td>
+                            <td>EXAM{{user.id}}</td>
+                        </tr>
+                        <tr *ngIf="user.phoneNumber">
+                            <td>Phone Number</td>
+                            <td>{{user.phoneNumber}}</td>
+                        </tr>
+                        <tr *ngIf="user.email">
+                            <td>Email</td>
+                            <td>{{user.email}}</td>
+                        </tr>
+                        <tr *ngIf="user.authorities[0].authority">
+                            <td>Role</td>
+                            <td>{{user.authorities[0].authority}}</td>
+                        </tr>
+                        <tr *ngIf="user.enabled">
+                            <td>Status</td>
+                            <td>{{user.enabled ?"ACTIVE": "NOT ACTIVE"}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <mat-card-actions class="text-center mb10 mt10">
+        <button mat-raised-button color="primary">UPDATE</button>
+        <button mat-raised-button color="accent">SHARE</button>
+      </mat-card-actions>
+</mat-card>

@@ -1,0 +1,55 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <mat-card>
+                    <div class="container image">
+                        <img src="../../../assets/quizimage.webp" alt="Quiz Image">
+                    </div>
+                    <h1>Register Here!!!</h1>
+
+                    <form (ngSubmit)="submitForm()">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input name="firstName" required="true" [(ngModel)]="user.firstName" matInput
+                                placeholder="Ex: Shapnesh">
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input name="lastName" required="true" [(ngModel)]="user.lastName" matInput
+                                placeholder="Ex: Tiwari">
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input name="email" required="true" [(ngModel)]="user.email" matInput
+                                placeholder="Use @acme.com">
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Phone Number</mat-label>
+                            <input name="phoneNumber" type="number" required="true" [(ngModel)]="user.phoneNumber" matInput
+                                placeholder="Dont begin with Country Code or 0">
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input name="username" required="true" [(ngModel)]="user.username" matInput
+                                placeholder="Ex: shapnesht">
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Enter your password</mat-label>
+                            <input name="password" required="true" [(ngModel)]="user.password" matInput
+                                [type]="hide ? 'password' : 'text'">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <div class="container">
+                            <button mat-raised-button type="submit" color="primary" class="ml10">Submit</button>
+                            <button mat-raised-button type="reset" color="warn" class="ml10">Reset</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

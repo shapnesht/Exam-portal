@@ -1,0 +1,12 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <h1 class="mt20">Welcome to Quizzy!!</h1>
+                <button *ngIf="!login.isLoggedIn()" routerLink="login" mat-raised-button>Click Here to login</button>
+                <button *ngIf="login.isLoggedIn() && login.getUserRole() =='ADMIN'" routerLink="admin" mat-raised-button>Take me to DashBoard</button>
+                <button *ngIf="login.isLoggedIn() && login.getUserRole() =='NORMAL'" routerLink="user-dashboard" mat-raised-button>Take me to DashBoard</button>
+            </div>
+        </div>
+    </div>
+</div>

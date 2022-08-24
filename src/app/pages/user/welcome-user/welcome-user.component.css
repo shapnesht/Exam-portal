@@ -1,0 +1,16 @@
+.admin-img {
+    height: 70vh;
+    width: 35vw;
+}
+
+.fontstyles{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 767px){
+    .admin-img {
+        height: 20vh;
+        width: 30vw;
+    }
+}

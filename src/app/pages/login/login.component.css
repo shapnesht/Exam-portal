@@ -1,0 +1,10 @@
+.full-width {
+  width: 100%;
+}
+
+.image {
+  max-height: 150px;
+  max-width: 150px;
+  border: 2px solid black;
+  border-radius: 50%;
+}

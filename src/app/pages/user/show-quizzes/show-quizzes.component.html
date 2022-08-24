@@ -1,0 +1,40 @@
+<mat-card>
+    <div class="bootstrap_wrapper">
+        <h1>Available Quizzes</h1>
+        <div class="container-fluid">
+            <div class="row" *ngIf="quizzes">
+                <div class="col-md-4" *ngFor="let q of quizzes">
+                    <mat-card class="mt10">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title>
+                                {{q.title}}
+                            </mat-card-title>
+                            <mat-card-subtitle>
+                                {{q.category.title}}
+                            </mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content class="truncate">
+                            <p class="desc">{{q.description}}</p>
+                            <p>Maximum Marks: {{q.maximumMarks}}</p>
+                            <p>Number Of Questions: {{q.numberOfQuestions}}</p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button color="primary">View</button>
+                            <button mat-button color="accent">Start</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+                <div class="col-md-12" *ngIf="quizzes.length== 0">
+                    <mat-card>
+                        <mat-card-content class="text-center">
+                            <img mat-card-xl-image src="../../../../assets/not-found.png" alt="Photo of a Shiba Inu">
+                            <h1 class="mt20">No Quizzes Found For this Category</h1>
+
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>

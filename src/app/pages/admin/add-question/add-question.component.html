@@ -1,0 +1,81 @@
+<mat-card>
+    <h1>Add Question to : <span style="font-weight: 600;">{{quiz.title}}</span></h1>
+    <mat-card-header>
+        <mat-card-subtitle>
+            Enter the details of the question
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        {{data|json}}
+        <div class="bootstrap_wrapper">
+            <div class="container col-md-12">
+                <form (ngSubmit)="onSubmit()">
+
+                    <!-- <mat-form-field class=" full-width" appearance="outline">
+                        <mat-label>Question</mat-label>
+                        <textarea name="content" [(ngModel)]="data.content" required="true" matInput
+                            placeholder="Enter Question Here" rows="8"></textarea>
+                    </mat-form-field> -->
+                    <ejs-richtexteditor class="mb20" name="content" [(ngModel)]="data.content" [(value)]="data.content"
+                        required="true" placeholder="Enter Question Here">
+                    </ejs-richtexteditor>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Option 1</mat-label>
+                                <input name="option1" [(ngModel)]="data.option1" required="true" matInput
+                                    placeholder="Enter 1st option here">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Option 2</mat-label>
+                                <input name="option2" [(ngModel)]="data.option2" required="true" matInput
+                                    placeholder="Enter 2nd option here">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Option 3</mat-label>
+                                <input name="option3" [(ngModel)]="data.option3" matInput
+                                    placeholder="Enter 3rd option here">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Option 4</mat-label>
+                                <input name="option4" [(ngModel)]="data.option4" matInput
+                                    placeholder="Enter 4th option here">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-divider class="mb10"></mat-divider>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Select Answer</mat-label>
+                                <mat-select required="true" name="answer" [(ngModel)]="data.answer">
+                                    <mat-option [value]="data.option1" *ngIf="data.option1">{{data.option1}}
+                                    </mat-option>
+                                    <mat-option [value]="data.option2" *ngIf="data.option2">{{data.option2}}
+                                    </mat-option>
+                                    <mat-option [value]="data.option3" *ngIf="data.option3">{{data.option3}}
+                                    </mat-option>
+                                    <mat-option [value]="data.option4" *ngIf="data.option4">{{data.option4}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="container text-center">
+                        <button class="mr10" type="submit" mat-raised-button color="primary">Save Question</button>
+                        <button class="ml10" type="reset" mat-raised-button color="accent">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,29 @@
+<mat-card>
+    <h1>Add Category</h1>
+    <!-- {{data|json}} -->
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <form (ngSubmit)="formSubmit()">
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Category Name</mat-label>
+                                <input name="name" [(ngModel)]="data.title" required="true" matInput placeholder="Ex: Aptitude">
+                            </mat-form-field>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Description</mat-label>
+                                <textarea name="description" [(ngModel)]="data.description" required="true" matInput
+                                    placeholder="Ex: This category tests your Aptitude Level" rows="15"></textarea>
+                            </mat-form-field>
+                            <div class="container text-center">
+                                <button class="mr10" type="submit" mat-raised-button color="primary">Save Category</button>
+                                <button class="ml10" type="reset" mat-raised-button color="accent">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

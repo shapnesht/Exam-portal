@@ -1,0 +1,41 @@
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card>
+                <h1>Questions of {{quizTitle}}</h1>
+                <div class="text-center">
+                    <button mat-raised-button color="primary" [routerLink]="'/admin/add-question/' + quizId">Add Question</button>
+                </div>
+                <mat-card *ngFor="let q of questions, let i= index" class="mt20">
+                    <mat-card-content>
+                        <p><strong>Q{{i+1}})</strong> <span class="ml10" [innerHTML]="q.content"></span></p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>A)</strong> <span class="ml10" [innerHTML]="q.option1"></span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>B)</strong> <span class="ml10" [innerHTML]="q.option2"></span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>C)</strong> <span class="ml10" [innerHTML]="q.option3"></span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>D)</strong> <span class="ml10" [innerHTML]="q.option4"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <mat-divider class="mt20 mb10"></mat-divider>
+                        <p><strong>Correct Answer - </strong>{{q.answer}}</p>
+                    </mat-card-content>
+                    <div>
+                        <button mat-raised-button [routerLink]="'/admin/update-question/'+quizId + '/' + q.questionId" class="mr20" color="primary">Update</button>
+                        <button mat-raised-button (click)="deleteQuestion(q.questionId)" color="warn">Delete</button>
+                    </div>
+                </mat-card>
+            </mat-card>
+        </div>
+    </div>
+</div>
