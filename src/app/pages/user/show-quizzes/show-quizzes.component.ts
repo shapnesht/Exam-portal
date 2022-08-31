@@ -16,7 +16,7 @@ export class ShowQuizzesComponent implements OnInit {
     this._route.params.subscribe((data: any) => {
       this.categoryId = data.categoryId;
       if (this.categoryId == 0) {
-        this._quiz.getAllQuizzes().subscribe(
+        this._quiz.getAllActiveQuizzes().subscribe(
           (data) => {
             this.quizzes = data;
           },
@@ -29,7 +29,7 @@ export class ShowQuizzesComponent implements OnInit {
           }
         );
       } else {
-        this._quiz.getQuizByCategory(this.categoryId).subscribe(
+        this._quiz.geActivetQuizByCategory(this.categoryId).subscribe(
           (data) => {
             this.quizzes = data;
           },

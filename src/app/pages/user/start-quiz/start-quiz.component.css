@@ -1,0 +1,15 @@
+.timer {
+    text-align: center;
+    border: 1px solid blue;
+}
+
+.container {
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.ow {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}

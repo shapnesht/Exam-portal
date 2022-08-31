@@ -1,2 +1,6 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<ngx-ui-loader fgsType="ball-scale-multiple" fgsColor="#1fcedd" logoUrl="./../assets/quizload.png" text="Please Wait!!">
+</ngx-ui-loader>
+<div ngxUiLoaderBlurred (blur)="5">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+</div>

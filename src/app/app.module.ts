@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {MatRadioModule} from '@angular/material/radio';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,15 +37,21 @@ import { UpdateCategoriesComponent } from './pages/admin/update-categories/updat
 import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
+import { NoSanitizePipe } from '../utils/nosanitizerpipe';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 import {
   RichTextEditorModule,
   ToolbarService,
   ImageService,
   HtmlEditorService,
 } from '@syncfusion/ej2-angular-richtexteditor';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from "ngx-ui-loader";
 import { SidemenuComponent } from './pages/user/sidemenu/sidemenu.component';
 import { ShowQuizzesComponent } from './pages/user/show-quizzes/show-quizzes.component';
 import { WelcomeUserComponent } from './pages/user/welcome-user/welcome-user.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartQuizComponent } from './pages/user/start-quiz/start-quiz.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +78,9 @@ import { WelcomeUserComponent } from './pages/user/welcome-user/welcome-user.com
     SidemenuComponent,
     ShowQuizzesComponent,
     WelcomeUserComponent,
+    InstructionsComponent,
+    StartQuizComponent,
+    NoSanitizePipe
   ],
   imports: [
     BrowserModule,
@@ -83,13 +93,19 @@ import { WelcomeUserComponent } from './pages/user/welcome-user/welcome-user.com
     FormsModule,
     MatSnackBarModule,
     HttpClientModule,
+    NgxUiLoaderModule,
     MatCardModule,
     MatToolbarModule,
+    MatProgressSpinnerModule,
     MatListModule,
     MatSlideToggleModule,
     MatSelectModule,
     RichTextEditorModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule,
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground:true
+    })
   ],
   providers: [
     MatSnackBar,

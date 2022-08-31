@@ -25,4 +25,8 @@ export class QuestionService {
   getAllQuestions(quizId:any) {
     return this._http.get(`${baseurl}/question/quiz/all/${quizId}`);
   }
+
+  evaluate(question:any) {
+    return this._http.post(`${baseurl}/question/evaluate-quiz`, question);
+  }
 }

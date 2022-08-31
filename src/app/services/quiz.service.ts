@@ -17,6 +17,10 @@ export class QuizService {
     return this.http.get(`${baseurl}/quiz/`);
   }
 
+  getAllActiveQuizzes() {
+    return this.http.get(`${baseurl}/quiz/active/`);
+  }
+
   saveQuiz(quiz:any) {
     return this.http.post(`${baseurl}/quiz/`, quiz);
   }
@@ -27,5 +31,9 @@ export class QuizService {
   
   getQuizByCategory(categoryId:any) {
     return this.http.get(`${baseurl}/quiz/category/${categoryId}`);
+  }
+
+  geActivetQuizByCategory(categoryId:any) {
+    return this.http.get(`${baseurl}/quiz/active/category/${categoryId}`);
   }
 }
