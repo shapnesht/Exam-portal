@@ -51,5 +51,29 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 11) Add Question to Quiz Page
 <img src="/Samples/addQuestion.png">
 
-12) Add Quiz Page
-<img src="/Samples/addQuiz.png">
+12) Normal User Dashboard
+<img src="/Samples/normal.png">
+
+13) All Quizzes Page
+<img src="/Samples/allQuizzes.png">
+
+14) Quizzes Of Particular Category Page
+<img src="/Samples/quizzesOfCategory.png">
+
+15) Instructions Page
+<img src="/Samples/instructions.png">
+
+16) Start Quiz Page
+<img src="/Samples/sweetalert.png">
+
+17) Live Quiz Page
+<img src="/Samples/liveQuiz.png">
+
+18) Submit Page
+<img src="/Samples/submit.png">
+
+19) Result Page
+<img src="/Samples/result.png">
+
+20) Print Result Page
+<img src="/Samples/print.png">
