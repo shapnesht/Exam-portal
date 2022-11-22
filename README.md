@@ -18,5 +18,38 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Samples
 
-1) Signup Page
+1) Homepage
+<img src="/Samples/homepage.png">
+
+2) Signup Page
+<img src="/Samples/signup.png">
+
+3) Login Page
 <img src="/Samples/login.png">
+
+4) Admin Dashboard
+<img src="/Samples/admin.png">
+
+5) Profile Page
+<img src="/Samples/profile.png">
+
+6) Categories Page
+<img src="/Samples/categories.png">
+
+7) Add Categories Page
+<img src="/Samples/addCategories.png">
+
+8) Quizzes Page
+<img src="/Samples/quizzes.png">
+
+9) Add Quiz Page
+<img src="/Samples/addQuiz.png">
+
+10) Questions of Quiz Page
+<img src="/Samples/questions.png">
+
+11) Add Question to Quiz Page
+<img src="/Samples/addQuestion.png">
+
+12) Add Quiz Page
+<img src="/Samples/addQuiz.png">
