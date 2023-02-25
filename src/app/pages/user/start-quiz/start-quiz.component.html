@@ -48,12 +48,12 @@
                             </div>
                             <div class="row mt20">
                                 <div class="col-md-6">
-                                    <mat-radio-button ngDefaultControl [value]="q.option3" [(ngModel)]="q.givenAnswer">
+                                    <mat-radio-button ngDefaultControl *ngIf = "q.option3" [value]="q.option3" [(ngModel)]="q.givenAnswer">
                                         <span class="ow  full-width">{{q.option3}}</span>
                                     </mat-radio-button>
                                 </div>
                                 <div class="col-md-6">
-                                    <mat-radio-button ngDefaultControl [value]="q.option4" [(ngModel)]="q.givenAnswer">
+                                    <mat-radio-button ngDefaultControl *ngIf = "q.option4" [value]="q.option4" [(ngModel)]="q.givenAnswer">
                                         <span class="ow full-width">{{q.option4}}</span>
                                     </mat-radio-button>
                                 </div>

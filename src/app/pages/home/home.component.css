@@ -1,0 +1,19 @@
+.homeimg {
+    width: 400px;
+    height: 400px;
+    display: block;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quizzy {
+    display: inline-block;
+    padding: 4px;
+    font-weight: 700;
+    font-size: 2em;
+    margin: 2px;
+}
